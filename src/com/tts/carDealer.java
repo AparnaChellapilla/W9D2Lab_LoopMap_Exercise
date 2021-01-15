@@ -6,15 +6,16 @@ import java.util.Map.Entry;
 
 
 public class carDealer {
-
-    public static void main(String[] args) {
-
+       public void  carDealer(){
         HashMap<String, String> vehicles = new HashMap<>();
 
-        vehicles.put("Honda", "Civic");
-        vehicles.put("Toyota", "camry");
-        vehicles.put("Nissan", "Rogue");
-        vehicles.put("Hyundai", "Sonata");
+        vehicles.put("Civic", "Honda");
+        vehicles.put("Camry", "Toyota");
+        vehicles.put("Rogue", "Nissan");
+        vehicles.put("Sonata", "Hyundai");
+        vehicles.put("CRV", "Honda");
+        vehicles.put("Accord", "Honda");
+        vehicles.put("Corolla", "Toyota");
 
         System.out.println("selection of vehicles we have now are: "
                 + vehicles.size());
@@ -31,16 +32,16 @@ public class carDealer {
 
         for (Entry<String, String> entry : vehicles.entrySet()) {
 
-            if (userInput.equals(entry.getValue())) {
-                String make = entry.getKey();
+            if (userInput.equals(entry.getKey())) {
+                String make = entry.getValue();
                 System.out.printf("Oh you are looking for a %s ? Our %s selection is right over here", userInput, make);
+
+
             }
 
-
         }
-
-            }
-        }
+    }
+}
 
 
 

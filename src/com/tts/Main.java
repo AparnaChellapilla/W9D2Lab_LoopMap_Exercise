@@ -5,38 +5,24 @@ import java.util.*;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in); // Define System input using a Scanner.
+        Scanner in = new Scanner(System.in);// Define System input using a Scanner.
+        System.out.println("Enter 1.Choosing Arrays (min,max,sum,product) \n 2.Choosing Cars from the list available: ");
+        int select = in.nextInt();
 
-        int[] num = new int[5];
-
-
-        int sum = 0;
-        int product = 1;
-
-        System.out.printf("Enter five numbers: "); // Ask the user for a number.
-        for (int i = 0; i < num.length; i++) { // Loop 5 times
-            num[i] = in.nextInt(); // Read the next int from the console.
-
-            sum = sum + num[i];
-            product = product * num[i];
+        if (select == 1) {
+            opNumbers selectNum = new opNumbers();
+            selectNum.opNumbers();
+        } else if (select == 2) {
+            carDealer carSelect = new carDealer();
+            carSelect.carDealer();
+        } else {
+            System.out.println("please Select valid input");
         }
-        System.out.println("Sum of integers: " + sum);
-        System.out.println("Product of integers: " + product);
-
-        Arrays.sort(num);// Sort the numbers in ascending order.
-
-        System.out.println("Sorted Array in Ascending order:");
-           for(int sortArr: num) {
-               System.out.println(sortArr);
-           }
-
-        System.out.println("min number from the list is :" + num[0]);
-        System.out.println("max number is :" + num[4]);
 
     }
-
 }
 
 
